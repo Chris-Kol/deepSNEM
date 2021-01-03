@@ -310,12 +310,12 @@ def ucsv2graph_infomax(fname, global_dict, sig_one_hot=None, y=None):
 
 
 def load_prot_embs(size, norm=False):
-    prot_path = 'data/prot_embeddings/linear_corex_embeddings/lc_seqveq_embedding_dicts/lc_seq_embeddings_dict_{}.pkl'.format(
+    prot_path = '/content/deepSNEM/data/prot_embeddings/linear_corex_embeddings/lc_seqveq_embedding_dicts/lc_seq_embeddings_dict_{}.pkl'.format(
         size)
     prot_dict = {}
     global_dict = {}
 
-    unique_prots = 'data/prot_embeddings/new_features/proteins.csv'
+    unique_prots = '/content/deepSNEM/data/prot_embeddings/new_features/proteins.csv'
     unique_df = pd.read_csv(unique_prots)
 
     for idx, prot in enumerate(unique_df.proteins.to_numpy()):
@@ -335,12 +335,12 @@ def load_prot_embs(size, norm=False):
 
 
 def load_prot_embs_go(size, norm=False):
-    prot_path = 'data/prot_embeddings/linear_corex_embeddings/lc_go_term_embeddings/lc_go_term_embeddings_dict_{}.pkl'.format(
+    prot_path = '/content/deepSNEM/data/prot_embeddings/linear_corex_embeddings/lc_go_term_embeddings/lc_go_term_embeddings_dict_{}.pkl'.format(
         size)
     prot_dict = {}
     global_dict = {}
 
-    unique_prots = 'data/prot_embeddings/new_features/proteins.csv'
+    unique_prots = '/content/deepSNEM/data/prot_embeddings/new_features/proteins.csv'
     unique_df = pd.read_csv(unique_prots)
 
     for idx, prot in enumerate(unique_df.proteins.to_numpy()):
